@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клуб подій</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Клуб подій</h1>
+            <p class="subtitle">Керуйте заявками на участь у шкільних активностях</p>
+        </header>
+
+        <main class="layout">
+            <!-- Блок форми -->
+            <section class="panel form-panel">
+                <h2>Нова заявка</h2>
+                <form id="application-form">
+                    <label for="name-input">Ім'я учасника</label>
+                    <input type="text" id="name-input" placeholder="Марія Коваль">
+
+                    <label for="event-input">Назва події</label>
+                    <input type="text" id="event-input" placeholder="Хакатон ліцею">
+
+                    <p id="error-message" class="error"></p>
+
+                    <button type="submit" class="add-btn">+ Додати заявку</button>
+                </form>
+            </section>
+
+            <!-- Блок списку заявок -->
+            <section class="panel list-panel">
+                <h2>Учасники</h2>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <span>Усього заявок</span>
+                        <strong id="total-count">0</strong>
+                    </div>
+                    <div class="stat-box">
+                        <span>Підтверджено</span>
+                        <strong id="confirmed-count">0</strong>
+                    </div>
+                </div>
+
+                <p id="empty-message" class="empty">Заявок поки немає</p>
+                <div id="applications-list" class="applications-list"></div>
+
+                <button type="button" id="clear-btn" class="clear-btn">Очистити всі заявки</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
